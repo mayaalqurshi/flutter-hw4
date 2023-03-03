@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw4b/pages/notification.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -91,7 +92,14 @@ class LoginPage extends StatelessWidget {
                       height: 50,
                       width: 140,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyNotification(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xff414141),
                           shape: const StadiumBorder(),

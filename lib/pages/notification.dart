@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw4b/pages/search.dart';
 
 class MyNotification extends StatelessWidget {
   const MyNotification({super.key});
@@ -63,14 +64,24 @@ class MyNotification extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              const Text(
-                "Not now",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SearchPage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Not now",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
               const SizedBox(
                 height: 80,
